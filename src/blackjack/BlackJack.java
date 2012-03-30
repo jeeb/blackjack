@@ -48,8 +48,7 @@ public class BlackJack {
         testhand.addCard(testdeck);
         System.out.println(testhand.toString());
         
-        // Testing deck's rank stuff
-        
+        System.out.println(testhand.countPoints(0));
         
     }
 }

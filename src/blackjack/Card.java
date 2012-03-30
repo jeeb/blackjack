@@ -16,7 +16,10 @@ public class Card {
 
         CLUBS, DIAMONDS, HEARTS, SPADES
     }
-
+    
+    /*
+     * Java enums with values omnomnomnom
+     */
     public enum Rank {
 
         DEUCE(2), THREE(3), FOUR(4), FIVE(5), SIX(6), SEVEN(7), EIGHT(8),
@@ -28,6 +31,7 @@ public class Card {
             this.val = val;
         }
     }
+
     private final Suit suit;
     private final Rank rank;
     private boolean isConcealed;

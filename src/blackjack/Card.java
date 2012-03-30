@@ -19,21 +19,40 @@ public class Card {
 
     public enum Rank {
 
-        DEUCE, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE,
-        TEN, JACK, QUEEN, KING, ACE
+        DEUCE,
+        THREE,
+        FOUR,
+        FIVE,
+        SIX,
+        SEVEN,
+        EIGHT,
+        NINE,
+        TEN,
+        JACK,
+        QUEEN,
+        KING,
+        ACE
     }
+    
     private final Suit suit;
     private final Rank rank;
-
     private boolean isConcealed;
 
     public Card(Suit suit, Rank rank) {
         this.suit = suit;
         this.rank = rank;
     }
-    public Rank rank() { return rank; }
-    public Suit suit() { return suit; }
-    
+
+    public Rank rank() {
+        return rank;
+    }
+
+    public Suit suit() {
+        return suit;
+    }
+
     @Override
-    public String toString() { return rank + " of " + suit; }
+    public String toString() {
+        return rank + " of " + suit;
+    }
 }

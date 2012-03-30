@@ -32,13 +32,19 @@ public class Hand {
         return hand.get(derp);
     }
     
-    public int countAll() {
+    public int countAll(int game_stage) {
         /*
          * Count the amount of points per hand here.
          * TEMPORARY ZERO.
          */
+        for ( Card cards : hand ) {
+            switch(cards.rank()) {
+                case DEUCE: return 2;
+            }
+        }
         return 0;
     }
+    
     
     @Override
     public String toString() {

@@ -10,5 +10,7 @@ package blackjack;
  * @author jeekstro
  */
 public class Game {
+    private int game_mode;
+    
     
 }

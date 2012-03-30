@@ -13,8 +13,8 @@ import java.util.*;
 
 public class Deck {
     final static int DECK_SIZE = 52;
-    public int cards_left;
-    public ArrayList<Card> deck;
+    private int cards_left;
+    private ArrayList<Card> deck;
     
     public Deck() {
         cards_left = DECK_SIZE;
@@ -28,6 +28,7 @@ public class Deck {
         System.out.println(""+deck.size());
     }
     
+    @Override
     public String toString() {
         return ""+cards_left;
     }

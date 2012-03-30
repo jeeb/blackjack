@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f46a33b-8c07-431d-8988-db3bf6cfe2e5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Blackjack.iml" afterPath="$PROJECT_DIR$/Blackjack.iml" />
     </list>
     <ignored path="blackjack.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -701,6 +699,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>deps</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

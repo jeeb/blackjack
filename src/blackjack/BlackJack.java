@@ -39,15 +39,15 @@ public class BlackJack {
         testhand.addCard(testdeck.deal());
         System.out.println(testhand.toString());
         
-        // Now we can add cards via a deck with just telling it what deck to use :D
+        /* 
+         * Now we can add cards via a
+         * deck with just telling it what deck to use :D
+         */
+        
         testhand.addCard(testdeck);
         System.out.println(testhand.toString());
         
         // Testing deck's rank stuff
-        Card testcard4 = testhand.getCard(0);
         
-        int herpderp = testcard4.getOrdinal();
-        System.out.println(testcard4.rank());
-        System.out.println(herpderp);
     }
 }

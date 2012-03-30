@@ -36,15 +36,15 @@ public class Hand {
         
         int currentpoints = 0;
         
-        for ( Card cards : hand ) {
-            switch(cards.rank()) {
-                default:
-                    currentpoints =+ cards.getValue();
+        for ( Card currentcard : hand ) {
+            switch(currentcard.rank()) {
                 case ACE:
                     if ( currentpoints > 10 )
-                        currentpoints =+ 1;
+                        currentpoints += 1;
                     else
-                        currentpoints =+ cards.getValue();
+                        currentpoints += currentcard.getValue();
+                default:
+                    currentpoints += currentcard.getValue();
             }
         }
         return currentpoints;

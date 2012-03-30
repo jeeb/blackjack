@@ -1,3 +1,4 @@
 *.jar
 !lib/*.jar
 *.class
+.idea/workspace.xml

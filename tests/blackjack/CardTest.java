@@ -1,4 +1,4 @@
-/**
+package blackjack; /**
  * Created with IntelliJ IDEA.
  * User: jeekstro
  * Date: 30.3.2012
@@ -7,6 +7,8 @@
  */
 import org.junit.*;
 import static org.junit.Assert.*;
+import blackjack.Card;
 
 public class CardTest {
+
 }

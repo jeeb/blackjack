@@ -32,6 +32,12 @@ public class Hand {
         hand.add(deck.deal(true));
     }
     
+    public void unConceal() {
+        for (Card i : hand) {
+            i.setConcealment(false);
+        }
+    }
+    
     public Card getCard(int derp) {
         return hand.get(derp);
     }

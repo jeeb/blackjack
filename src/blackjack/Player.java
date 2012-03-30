@@ -64,6 +64,10 @@ public class Player {
         }       
     }
     
+    public void unConcealCards() {
+        hand.unConceal();
+    }
+    
     public void addMoney(int amount) {
         money += amount;
     }

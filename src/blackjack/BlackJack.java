@@ -78,6 +78,10 @@ public class BlackJack {
         dealer.drawConcealedCard(testdeck2);
         System.out.println(dealer);
         
+        dealer.unConcealCards();
+        
+        System.out.println(dealer);
+        
         
     }
 }

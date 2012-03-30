@@ -38,9 +38,6 @@ public class BlackJack {
         
         System.out.println("\nNew players created.");
         
-        // I hate goto but here it seems like raptors might work.
-        gameplay:
-        
         
         System.out.println("\nCards dealt for the player.");
         player.drawCard(demodeck);
@@ -58,16 +55,18 @@ public class BlackJack {
             if(player.getMoney() <= 0){
                 System.out.println("You have run out of money, Full Game Over.");
             }
+            
+            return;
         }
         
-        /*
+        
         System.out.println("\nCards dealt for the dealer.");
         dealer.drawCard(demodeck);
         dealer.drawConcealedCard(demodeck);
         System.out.println(dealer);
         
         
-        
+        /*
         System.out.println("How do you play?");
         System.out.println(" [1]  J-j-j-jam it in!");
         System.out.println(" [2]  Stop here.");

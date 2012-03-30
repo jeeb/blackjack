@@ -38,6 +38,8 @@ public class Card {
     }
     public Rank rank() { return rank; }
     public Suit suit() { return suit; }
+    
+    @Override
     public String toString() { return rank + " of " + suit; }
 
     private static Scanner reader = new Scanner(System.in);

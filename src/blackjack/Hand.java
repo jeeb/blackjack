@@ -32,7 +32,7 @@ public class Hand {
         return hand.get(derp);
     }
     
-    public int countPoints(int game_stage) {
+    public int countPoints(int game_mode) {
         int currentpoints = 0;
         
         /*

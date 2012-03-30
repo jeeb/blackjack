@@ -10,7 +10,9 @@ package blackjack;
  * @author jeekstro
  */
 public class Game {
-    private int game_mode;
+    public enum Game_Mode {
+        MAIN_MENU, START_MENU, FIRST_DEAL, DEALING
+    }
     
     
 }

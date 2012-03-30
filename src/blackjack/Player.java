@@ -10,12 +10,32 @@ package blackjack;
  * @author jeekstro
  */
 public class Player {
+    private String name;
+    private boolean isdealer;
     private int money;
     private Hand hand;
     
     public Player() {
+        this.name = "Default Name";
         this.money = 25;
         hand = new Hand();
+    }
+    
+    public Player(String name) {
+        this.isdealer = false;
+        this.name = name;
+        this.money = 25;
+        hand = new Hand();
+    }
+    
+    public Player(boolean isdealer) {
+        if (isdealer) {
+            this.isdealer = true;
+            this.name = "Dealer";
+            this.money = 9001;
+            hand = new Hand();
+        } else
+            System.out.println("This thing is supposed to be used when creating dealers! Nothing created.");
     }
     
     public int getMoney() {
@@ -36,6 +56,6 @@ public class Player {
     
     @Override
     public String toString() {
-        return "Player has " + money + " money and a hand of " + hand + " cards, " + hand.countPoints( 0 ) + " points.";
+        return "Player "+name+" has " + money + " money and a hand of " + hand + " cards, " + hand.countPoints( 0 ) + " points.";
     }
 }

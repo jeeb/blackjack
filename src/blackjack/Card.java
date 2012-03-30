@@ -34,12 +34,10 @@ public class Card {
     public Rank rank() { return rank; }
     public Suit suit() { return suit; }
     
+    public int getOrdinal() {
+        return rank.ordinal();
+    }
+    
     @Override
     public String toString() { return rank + " of " + suit; }
-
-    private static Scanner reader = new Scanner(System.in);
-    
-    public static void main(String args[]) {
-
-    }
 }

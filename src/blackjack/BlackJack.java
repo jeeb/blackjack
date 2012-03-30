@@ -26,18 +26,28 @@ public class BlackJack {
         Deck testdeck = new Deck();
         System.out.println(testdeck.toString());
         
-        Card testcard2 = testdeck.Deal();
+        Card testcard2 = testdeck.deal();
         System.out.println(testcard2.toString());
         
-        Card testcard3 = testdeck.Deal();
+        Card testcard3 = testdeck.deal();
         System.out.println(testcard3.toString());
         
         // Testing hand's inner workings
         Hand testhand = new Hand();
         System.out.println(testhand.toString());
         
-        testhand.addCard(testdeck.Deal());
+        testhand.addCard(testdeck.deal());
         System.out.println(testhand.toString());
         
+        // Now we can add cards via a deck with just telling it what deck to use :D
+        testhand.addCard(testdeck);
+        System.out.println(testhand.toString());
+        
+        // Testing deck's rank stuff
+        Card testcard4 = testhand.getCard(0);
+        
+        int herpderp = testcard4.getOrdinal();
+        System.out.println(testcard4.rank());
+        System.out.println(herpderp);
     }
 }

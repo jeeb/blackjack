@@ -56,6 +56,14 @@ public class Player {
         hand.addCard(deck);
     }
     
+    public void drawConcealedCard(Deck deck) {
+        if( this.isdealer ) {
+            hand.addConcealedCard(deck);
+        } else {
+            System.out.println("Herp derp, trying to be faggots here? No card dealt.");
+        }       
+    }
+    
     public void addMoney(int amount) {
         money += amount;
     }

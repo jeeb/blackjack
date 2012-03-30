@@ -75,6 +75,7 @@ public class BlackJack {
         System.out.println(player);
         
         dealer.drawCard(testdeck2);
+        dealer.drawConcealedCard(testdeck2);
         System.out.println(dealer);
         
         

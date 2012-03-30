@@ -34,9 +34,16 @@ public class Card {
 
     private final Suit suit;
     private final Rank rank;
-    private boolean isConcealed;
+    private boolean isconcealed;
 
     public Card(Suit suit, Rank rank) {
+        this.suit = suit;
+        this.rank = rank;
+        this.isconcealed = false;
+    }
+
+    public Card(Suit suit, Rank rank, boolean isconcealed) {
+        this.isconcealed = isconcealed;
         this.suit = suit;
         this.rank = rank;
     }
@@ -53,8 +60,19 @@ public class Card {
         return rank.val;
     }
 
+    public boolean isConcealed() {
+        return isconcealed;
+    }
+
+    public void setConcealment(boolean concealment) {
+        this.isconcealed = concealment;
+    }
+
     @Override
     public String toString() {
-        return rank + " of " + suit;
+        if( this.isconcealed )
+            return rank + " of " + suit + ", is concealed.";
+        else
+            return rank + " of " + suit;
     }
 }

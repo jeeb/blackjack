@@ -28,6 +28,10 @@ public class Hand {
         hand.add(deck.deal());
     }
     
+    public void addConcealedCard(Deck deck) {
+        hand.add(deck.deal(true));
+    }
+    
     public Card getCard(int derp) {
         return hand.get(derp);
     }
@@ -40,11 +44,15 @@ public class Hand {
          */
         
         for ( Card i : hand ) {
-            switch(i.rank()) {
-                case ACE:
-                    continue;
-                default:
-                    currentpoints += i.getValue();
+            if (i.isConcealed()) {
+                continue;
+            } else {
+                switch(i.rank()) {
+                    case ACE:
+                        continue;
+                    default:
+                        currentpoints += i.getValue();
+                }
             }
         }
         
@@ -53,17 +61,21 @@ public class Hand {
          */
         
         for ( Card currentcard : hand ) {
-            switch(currentcard.rank()) {
-                case ACE:
-                    if ( currentpoints > 10 )
-                        currentpoints += 1;
-                    else
-                        currentpoints += currentcard.getValue();
-                default:
-                    continue;
+            if( currentcard.isConcealed() ) {
+                continue;
+            } else {
+                switch(currentcard.rank()) {
+                    case ACE:
+                        if ( currentpoints > 10 )
+                            currentpoints += 1;
+                        else
+                            currentpoints += currentcard.getValue();
+                    default:
+                        continue;
+                }
             }
-        }
-        return currentpoints;
+       }
+       return currentpoints;     
     }
     
     

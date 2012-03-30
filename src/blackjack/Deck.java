@@ -42,6 +42,17 @@ public class Deck {
 
         return randomcard;
     }
+    
+    public Card deal(boolean concealment) {
+        int selection = generator.nextInt(deck.size());
+        
+        Card randomcard = deck.get(selection);
+        randomcard.setConcealment(concealment);
+        
+        deck.remove(selection);
+        
+        return randomcard;
+    }
 
     @Override
     public String toString() {

@@ -65,7 +65,73 @@ public class BlackJack {
         dealer.drawConcealedCard(demodeck);
         System.out.println(dealer);
         
+        dealer.unConcealCards();
+        System.out.println(dealer);
         
+        // Testataan korttiluokan toimivuutta. Käpistellään.
+        
+        System.out.println("\n*******************\n\nOriginal testing stuff:\n");
+        
+        Card testcard = new Card(Card.Suit.DIAMONDS, Card.Rank.DEUCE);
+        System.out.println(testcard.toString());
+        
+        
+        // Testing deck's inner workings
+        
+        System.out.println("*******************\n\nDeck testing:\n");
+        
+        Deck testdeck = new Deck();
+        System.out.println(testdeck.toString());
+        
+        Card testcard2 = testdeck.deal();
+        System.out.println(testcard2.toString());
+        
+        Card testcard3 = testdeck.deal();
+        System.out.println(testcard3.toString());
+        System.out.println(testcard3.getValue());
+        
+        // Testing hand's inner workings
+        System.out.println("*******************\n\nHand testing:\n");
+        
+        Hand testhand = new Hand();
+        System.out.println(testhand.toString());
+        
+        testhand.addCard(testdeck.deal());
+        System.out.println(testhand.toString());
+        
+        
+        /* 
+         * Now we can add cards via a
+         * deck with just telling it what deck to use :D
+         */
+        
+        testhand.addCard(testdeck);
+        System.out.println(testhand.toString());
+        
+        System.out.println(testhand.countPoints(0));
+        
+        /*
+         * Player testing
+         */
+        
+        System.out.println("*******************\n\nPlayer testing:\n");
+        
+        Deck testdeck2 = new Deck();
+        
+        Player player2 = new Player("TestPlayer");
+        Player dealer2 = new Player("Marko", true);
+        
+        player2.drawCard(testdeck2);
+        player2.drawCard(testdeck2);
+        System.out.println(player2);
+        
+        dealer2.drawCard(testdeck2);
+        dealer2.drawConcealedCard(testdeck2);
+        System.out.println(dealer2);
+        
+        dealer2.unConcealCards();
+        
+        System.out.println(dealer2);
         /*
         System.out.println("How do you play?");
         System.out.println(" [1]  J-j-j-jam it in!");

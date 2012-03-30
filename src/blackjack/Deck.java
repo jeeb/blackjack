@@ -25,12 +25,12 @@ public class Deck {
 
     public Card deal() {
         // For debug
-        //System.out.println("Deck size before dealing was: " + deck.size());
+        System.out.println("Deck size before dealing was: " + deck.size());
 
         // deal random number between 0 and deck.size()
         int selection = generator.nextInt(deck.size());
         // For debug
-        //System.out.println("Random generated number was: " + selection);
+        System.out.println("Random generated number was: " + selection);
 
         /*
          * Return a Card to the using appliance
@@ -44,7 +44,11 @@ public class Deck {
     }
     
     public Card deal(boolean concealment) {
+        System.out.println("Deck size before dealing was: " + deck.size());
+        
         int selection = generator.nextInt(deck.size());
+        
+        System.out.println("Random generated number was: " + selection);
         
         Card randomcard = deck.get(selection);
         randomcard.setConcealment(concealment);

@@ -32,14 +32,24 @@ public class Hand {
         return hand.get(derp);
     }
     
-    public int countAll(int game_stage) {
+    public int countPoints(int game_stage) {
         /*
          * Count the amount of points per hand here.
-         * TEMPORARY ZERO.
+         * NO MORE ZERO SIRE NO MORE.
          */
+        
+        int currentpoints = 0;
+        
         for ( Card cards : hand ) {
             switch(cards.rank()) {
-                case DEUCE: return 2;
+                /*
+                 * Brainfart switch statement.
+                 * Blame the fact that I couldn't get DEUCE(2) etc. done
+                 * in Card.java
+                 */
+                case DEUCE: currentpoints =+ 2;
+                case THREE: currentpoints =+ 3;
+                
             }
         }
         return 0;

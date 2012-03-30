@@ -31,6 +31,7 @@ public class BlackJack {
         
         Card testcard3 = testdeck.deal();
         System.out.println(testcard3.toString());
+        System.out.println(testcard3.getValue());
         
         // Testing hand's inner workings
         Hand testhand = new Hand();
@@ -48,6 +49,7 @@ public class BlackJack {
         System.out.println(testhand.toString());
         
         // Testing deck's rank stuff
+        
         
     }
 }

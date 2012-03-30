@@ -34,10 +34,6 @@ public class Card {
     public Rank rank() { return rank; }
     public Suit suit() { return suit; }
     
-    public int getOrdinal() {
-        return rank.ordinal();
-    }
-    
     @Override
     public String toString() { return rank + " of " + suit; }
 }

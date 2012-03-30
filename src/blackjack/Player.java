@@ -38,6 +38,16 @@ public class Player {
             System.out.println("This thing is supposed to be used when creating dealers! Nothing created.");
     }
     
+    public Player(String name, boolean isdealer) {
+        if (isdealer) {
+            this.isdealer = true;
+            this.name = name;
+            this.money = 9001;
+            hand = new Hand();
+        } else
+            System.out.println("This thing is supposed to be used when creating dealers! Nothing created.");
+    }
+    
     public int getMoney() {
         return money;
     }
@@ -60,10 +70,9 @@ public class Player {
     
     @Override
     public String toString() {
-        if (this.isdealer) {
+        if (this.isdealer)
             return "Player "+name+"[D] has " + money + " money and a hand of " + hand + " cards, " + hand.countPoints( 0 ) + " points.";
-        } else
+        else
             return "Player "+name+" has " + money + " money and a hand of " + hand + " cards, " + hand.countPoints( 0 ) + " points.";
-            
     }
 }

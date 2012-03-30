@@ -68,7 +68,7 @@ public class BlackJack {
         Deck testdeck2 = new Deck();
         
         Player player = new Player("TestPlayer");
-        Player dealer = new Player(true);
+        Player dealer = new Player("Marko", true);
         
         player.drawCard(testdeck2);
         player.drawCard(testdeck2);

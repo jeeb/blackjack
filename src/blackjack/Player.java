@@ -9,10 +9,7 @@ package blackjack;
  *
  * @author jeekstro
  */
-public class Player {
-    final static int MAX_CARDS = 52;
-    private int amount_cards;
-    
+public class Player {    
     Player() {
         
     }

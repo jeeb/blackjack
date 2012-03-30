@@ -11,8 +11,6 @@ package blackjack;
 import java.util.*;
 
 public class Deck {
-
-    final static int DECK_SIZE = 52;
     private ArrayList<Card> deck;
     Random generator = new Random();
 

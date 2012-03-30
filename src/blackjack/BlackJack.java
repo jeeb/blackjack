@@ -21,6 +21,8 @@ public class BlackJack {
         Card testcard = new Card(Card.Suit.DIAMONDS, Card.Rank.DEUCE);
         System.out.println(testcard.toString());
         
+        
+        // Testing deck's inner workings
         Deck testdeck = new Deck();
         System.out.println(testdeck.toString());
         
@@ -29,5 +31,13 @@ public class BlackJack {
         
         Card testcard3 = testdeck.Deal();
         System.out.println(testcard3.toString());
+        
+        // Testing hand's inner workings
+        Hand testhand = new Hand();
+        System.out.println(testhand.toString());
+        
+        testhand.addCard(testdeck.Deal());
+        System.out.println(testhand.toString());
+        
     }
 }

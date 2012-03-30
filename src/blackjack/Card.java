@@ -71,7 +71,8 @@ public class Card {
     @Override
     public String toString() {
         if( this.isconcealed )
-            return rank + " of " + suit + ", is concealed.";
+            //return rank + " of " + suit + ", is concealed.";
+            return "concealed card";
         else
             return rank + " of " + suit;
     }

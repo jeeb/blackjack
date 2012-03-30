@@ -19,21 +19,9 @@ public class Card {
 
     public enum Rank {
 
-        DEUCE,
-        THREE,
-        FOUR,
-        FIVE,
-        SIX,
-        SEVEN,
-        EIGHT,
-        NINE,
-        TEN,
-        JACK,
-        QUEEN,
-        KING,
-        ACE
+        DEUCE, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN,
+        KING, ACE
     }
-    
     private final Suit suit;
     private final Rank rank;
     private boolean isConcealed;

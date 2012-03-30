@@ -33,8 +33,24 @@ public class Hand {
     }
     
     public int countPoints(int game_stage) {
-        
         int currentpoints = 0;
+        
+        /*
+         * Count non-aces first
+         */
+        
+        for ( Card i : hand ) {
+            switch(i.rank()) {
+                case ACE:
+                    continue;
+                default:
+                    currentpoints += i.getValue();
+            }
+        }
+        
+        /*
+         * Then count aces
+         */
         
         for ( Card currentcard : hand ) {
             switch(currentcard.rank()) {
@@ -44,7 +60,7 @@ public class Hand {
                     else
                         currentpoints += currentcard.getValue();
                 default:
-                    currentpoints += currentcard.getValue();
+                    continue;
             }
         }
         return currentpoints;

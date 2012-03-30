@@ -45,10 +45,4 @@ public class Deck {
         
         return deck.get(derp);
     }
-    /*
-    public String toString() {
-        return "Herp derp";
-    }
-    * 
-    */
 }

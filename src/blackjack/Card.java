@@ -25,11 +25,6 @@ public class Card {
     private final Suit suit;
     private final Rank rank;
 
-    /*
-     * Changing ints to enums
-     * private int suit;
-     * private int rank;
-     */
     private boolean isConcealed;
 
     public Card(Suit suit, Rank rank) {

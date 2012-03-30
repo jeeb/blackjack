@@ -24,7 +24,6 @@ public class Deck {
                 deck.add(new Card(suit, rank));
             }
         }
-        System.out.println(""+deck.size());
     }
     
     @Override
@@ -36,13 +35,18 @@ public class Deck {
         System.out.println("Deck size before dealing was: "+deck.size());
         
         // deal random number between 0 and deck.size()
+        int selection = generator.nextInt(deck.size());
         
-        int derp = generator.nextInt(deck.size());
+        System.out.println("Random generated number was: "+selection);
         
-        System.out.println("Random generated number was: "+derp);
+        /*
+         * Return a Card to the using appliance
+         * and remove it from the deck. 
+         */
         
-        // return a Card to the using appliance.
+        Card randomcard = deck.get(selection);
+        deck.remove(selection);
         
-        return deck.get(derp);
+        return randomcard;
     }
 }

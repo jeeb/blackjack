@@ -24,12 +24,13 @@ public class Deck {
     }
 
     public Card deal() {
-        System.out.println("Deck size before dealing was: " + deck.size());
+        // For debug
+        //System.out.println("Deck size before dealing was: " + deck.size());
 
         // deal random number between 0 and deck.size()
         int selection = generator.nextInt(deck.size());
-
-        System.out.println("Random generated number was: " + selection);
+        // For debug
+        //System.out.println("Random generated number was: " + selection);
 
         /*
          * Return a Card to the using appliance

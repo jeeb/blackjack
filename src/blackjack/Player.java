@@ -54,8 +54,16 @@ public class Player {
         money -= amount;
     }
     
+    public boolean isDealer() {
+       return this.isdealer; 
+    }
+    
     @Override
     public String toString() {
-        return "Player "+name+" has " + money + " money and a hand of " + hand + " cards, " + hand.countPoints( 0 ) + " points.";
+        if (this.isdealer) {
+            return "Player "+name+"[D] has " + money + " money and a hand of " + hand + " cards, " + hand.countPoints( 0 ) + " points.";
+        } else
+            return "Player "+name+" has " + money + " money and a hand of " + hand + " cards, " + hand.countPoints( 0 ) + " points.";
+            
     }
 }

@@ -84,10 +84,23 @@ public class Hand {
        return currentpoints;     
     }
     
+    void clearHand() {
+        hand.clear();
+    }
     
     @Override
     public String toString() {
-       return ""+hand.size(); 
+        /*String outputstring = "Current cards in hand:\n";
+        
+        for (Card j : hand ) {
+            outputstring.concat(j.toString());
+            outputstring.concat("\n");
+        }
+        return outputstring;
+         */
+        return ""+hand.size(); 
     }
+
+
     
 }

@@ -17,14 +17,14 @@ public class Player {
     
     public Player() {
         this.name = "Default Name";
-        this.money = 25;
+        this.money = 100;
         hand = new Hand();
     }
     
     public Player(String name) {
         this.isdealer = false;
         this.name = name;
-        this.money = 25;
+        this.money = 100;
         hand = new Hand();
     }
     
@@ -60,13 +60,13 @@ public class Player {
         if( this.isdealer ) {
             hand.addConcealedCard(deck);
         } else {
-            System.out.println("Herp derp, trying to be faggots here? No card dealt.");
+            System.out.println("Herp derp, trying to be funny here? No card dealt.");
         }       
     }
     
     public void unConcealCards() {
         hand.unConceal();
-    }
+    } 
     
     public void addMoney(int amount) {
         money += amount;
@@ -80,11 +80,26 @@ public class Player {
        return this.isdealer; 
     }
     
+    public void clearHand() {
+        hand.clearHand();
+    }
+    
+    public int getPoints() {
+        return hand.countPoints( 0 );
+    }
+    
     @Override
     public String toString() {
-        if (this.isdealer)
-            return "Player "+name+"[D] has " + money + " money and a hand of " + hand + " cards, " + hand.countPoints( 0 ) + " points.";
-        else
+        if (this.isdealer) {
+            //String herpderpstring = hand.toString();
+            //herpderpstring.concat("\nPlayer [D] "+name+" has " + money + " money and a hand of " + hand + " cards, " + hand.countPoints( 0 ) + " points.");
+            //return herpderpstring; 
+            return "Player [D] "+name+" has " + money + " money and a hand of " + hand + " cards, " + hand.countPoints( 0 ) + " points.";
+        } else {
+            //String herpderpstring = hand.toString();
+            //herpderpstring.concat("\nPlayer [D] "+name+" has " + money + " money and a hand of " + hand + " cards, " + hand.countPoints( 0 ) + " points.");
+            //return herpderpstring;            
             return "Player "+name+" has " + money + " money and a hand of " + hand + " cards, " + hand.countPoints( 0 ) + " points.";
+        }
     }
 }

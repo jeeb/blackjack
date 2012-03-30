@@ -53,6 +53,15 @@ public class Deck {
         
         return randomcard;
     }
+    
+    public void resetDeck() {
+        deck.clear();
+        for (Card.Suit suit : Card.Suit.values()) {
+            for (Card.Rank rank : Card.Rank.values()) {
+                deck.add(new Card(suit, rank));
+            }
+        }
+    }
 
     @Override
     public String toString() {

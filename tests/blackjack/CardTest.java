@@ -1,13 +1,14 @@
-package blackjack; /**
+/**
  * Created with IntelliJ IDEA.
  * User: jeekstro
  * Date: 30.3.2012
  * Time: 16:27
  * To change this template use File | Settings | File Templates.
  */
+package blackjack;
+
 import org.junit.*;
 import static org.junit.Assert.*;
-import blackjack.Card;
 
 public class CardTest {
 
@@ -17,6 +18,5 @@ public class CardTest {
         Card testcard = new Card(Card.Suit.SPADES, Card.Rank.ACE , true);
 
         assertTrue(testcard.isConcealed() == true);
-
     }
 }

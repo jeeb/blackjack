@@ -11,4 +11,12 @@ import blackjack.Card;
 
 public class CardTest {
 
+    @Test
+    public void test_isConcealed() {
+        System.out.println("Test if a created concealed card is really concealed.");
+        Card testcard = new Card(Card.Suit.SPADES, Card.Rank.ACE , true);
+
+        assertTrue(testcard.isConcealed() == true);
+
+    }
 }

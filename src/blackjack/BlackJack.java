@@ -9,14 +9,14 @@ package blackjack;
  *
  * @author jeekstro
  */
+import java.util.*;
+
 public class BlackJack {
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        System.out.println("Herp derp durpa hurpa.");
+    public static void main(String args[]) {
+        
     }
-
 }

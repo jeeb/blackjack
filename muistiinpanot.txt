@@ -1,0 +1,14 @@
+blackjack {
+    deck
+    card
+    hand 
+    player
+}
+
+deck -> card
+
+deck [52 cards]
+-- no duplicates --
+card [suit, rank]
+
+

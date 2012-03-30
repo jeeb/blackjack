@@ -23,5 +23,8 @@ public class BlackJack {
         
         Deck testdeck = new Deck();
         System.out.println(testdeck.toString());
+        
+        Card testcard2 = testdeck.Deal();
+        System.out.println(testcard2.toString());
     }
 }

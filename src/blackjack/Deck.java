@@ -16,6 +16,8 @@ public class Deck {
     private int cards_left;
     private ArrayList<Card> deck;
     
+    Random generator = new Random();
+    
     public Deck() {
         cards_left = DECK_SIZE;
         ArrayList<Card> deck = new ArrayList<Card>();
@@ -31,6 +33,20 @@ public class Deck {
     @Override
     public String toString() {
         return ""+cards_left;
+    }
+    
+    public Card Deal() {
+        System.out.println("Deck size before dealing was: "+deck.size());
+        
+        // deal random number between 0 and deck.size()
+        
+        int derp = generator.nextInt(deck.size());
+        
+        System.out.println("Random generated number was: "+derp);
+        
+        // return a Card to the using appliance.
+        
+        return deck.get(derp);
     }
     /*
     public String toString() {
